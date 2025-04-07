@@ -154,7 +154,7 @@ We recommend using the website [**draw.io** / diagrams.net](https://draw.io) (al
 | Public / Private              | `+` / `-`                               |
 | Attribute (Field)             | `name: Type`                            |
 | Method                        | `methodName(params): ReturnType`       |
-| Static                        | <u>Underlined</u>                              |
+| Static                        | <ins>Underlined</ins>                              |
 | Abstract                      | *Italicized*                              |
 | Aggregation (HAS-A)          | ◇ Diamond Arrow                           |
 | Inheritance (IS-A)           | ◁ Triangle Arrow                          |
