@@ -23,6 +23,12 @@ This note is a reference for understanding and creating **UML Class Diagrams** i
 	* [So Which Should You Use?](#SoWhichShouldYouUse)
 * [Tools for Making UML Diagrams](#ToolsforMakingUMLDiagrams)
 * [Summary of Elements to Include](#SummaryofElementstoInclude)
+* [Using Enums in UML Class Diagrams](#UsingEnumsinUMLClassDiagrams)
+	* [Declaring an Enum in UML](#DeclaringanEnuminUML)
+	* [Referencing the Enum in a Class](#ReferencingtheEnuminaClass)
+	* [Connecting the Enum to the Class](#ConnectingtheEnumtotheClass)
+	* [In Java](#InJava)
+	* [Summary](#Summary)
 * [Additional References](#AdditionalReferences)
 
 <!-- vscode-markdown-toc-config
@@ -213,11 +219,11 @@ We recommend using the website [**draw.io** / diagrams.net](https://draw.io) (al
 
 <br>
 
-## Using Enums in UML Class Diagrams
+## <a name='UsingEnumsinUMLClassDiagrams'></a>Using Enums in UML Class Diagrams
 
 When designing object-oriented systems, it's common to use **enums** to represent a fixed set of values — for example, message priorities like `NORMAL`, `HIGH`, or `URGENT`. UML has a standard way to show this.
 
-### Declaring an Enum in UML
+### <a name='DeclaringanEnuminUML'></a>Declaring an Enum in UML
 
 You represent an enum using a **class-like box** with the stereotype `<<enumeration>>`. For example:
 
@@ -233,7 +239,7 @@ You represent an enum using a **class-like box** with the stereotype `<<enumerat
 
 This indicates that `Priority` is an enum with three possible values.
 
-### Referencing the Enum in a Class
+### <a name='ReferencingtheEnuminaClass'></a>Referencing the Enum in a Class
 
 If you have a class like `Message` that uses this enum, you can show it as:
 
@@ -248,7 +254,7 @@ If you have a class like `Message` that uses this enum, you can show it as:
 
 This shows that the `priority` field is of type `Priority`, defined by the enum above.
 
-### Connecting the Enum to the Class
+### <a name='ConnectingtheEnumtotheClass'></a>Connecting the Enum to the Class
 
 Use a **simple solid line** (association) to connect the class to the enum:
 
@@ -276,7 +282,7 @@ There is:
 - **No triangle** (◁) — this is not inheritance.
 - Just a plain association line to indicate usage.
 
-### In Java
+### <a name='InJava'></a>In Java
 
 ```java
 public enum Priority {
@@ -294,7 +300,7 @@ public class Message {
 }
 ```
 
-### Summary
+### <a name='Summary'></a>Summary
 
 | Concept        | UML Representation             |
 |----------------|--------------------------------|
