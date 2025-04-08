@@ -16,6 +16,11 @@ This note is a reference for understanding and creating **UML Class Diagrams** i
 	* [IS-A Relationship (Inheritance)](#IS-ARelationshipInheritance)
 * [Static Variables and Methods](#StaticVariablesandMethods)
 * [Abstract Classes and Methods](#AbstractClassesandMethods)
+* [Specificity vs. Language-Neutral Implementation](#Specificityvs.Language-NeutralImplementation)
+	* [Example Attribute/Method Variants](#ExampleAttributeMethodVariants)
+	* [Generalized (Language-Neutral) Approach](#GeneralizedLanguage-NeutralApproach)
+	* [Specific (Java-Centric) Approach](#SpecificJava-CentricApproach)
+	* [So Which Should You Use?](#SoWhichShouldYouUse)
 * [Tools for Making UML Diagrams](#ToolsforMakingUMLDiagrams)
 * [Summary of Elements to Include](#SummaryofElementstoInclude)
 * [Additional References](#AdditionalReferences)
@@ -143,6 +148,52 @@ Any subclass must implement the abstract method.
 
 <br>
 
+## <a name='Specificityvs.Language-NeutralImplementation'></a>Specificity vs. Language-Neutral Implementation
+
+When designing UML diagrams, it's common to wonder **how specific you should be about data structures and return types**. There are two valid approaches, each with its advantages:
+
+### <a name='ExampleAttributeMethodVariants'></a>Example Attribute/Method Variants
+
+```plaintext
+- messages: String[ ]
+- messages: ArrayList<String>
+
++ getMessages(): String[ ]
++ getMessages(): List<String>
+```
+
+### <a name='GeneralizedLanguage-NeutralApproach'></a>Generalized (Language-Neutral) Approach
+
+- `- messages: String[ ]`  
+- `+ getMessages(): String[ ]`
+
+This version avoids Java-specific classes like `ArrayList` or `List`. It's ideal if you're:
+- Designing for a **broad audience** or multiple languages
+- Just focusing on **conceptual modeling**
+- Teaching the idea of an **array or collection**, without locking into Java syntax
+
+
+### <a name='SpecificJava-CentricApproach'></a>Specific (Java-Centric) Approach
+
+- `- messages: ArrayList<String>`  
+- `+ getMessages(): List<String>`
+
+This version uses **Java's collection classes** explicitly. It’s great when:
+- You're implementing the diagram in Java immediately
+- You want to be **clear about coding choices** and interface use
+- You're reinforcing the distinction between concrete classes (`ArrayList`) and abstract interfaces (`List`)
+
+
+### <a name='SoWhichShouldYouUse'></a>So Which Should You Use?
+
+Both styles are acceptable in our class. It depends on your **intent**:
+- If you’re focused on **planning or cross-language design**, go more general.
+- If you're preparing to **write Java code right after**, feel free to be specific.
+
+Just be consistent within a diagram.
+
+<br>
+
 ## <a name='ToolsforMakingUMLDiagrams'></a>Tools for Making UML Diagrams
 We recommend using the website [**draw.io** / diagrams.net](https://draw.io) (also available on the Chrome Web Store) to build your own UML class diagrams.
 
@@ -159,6 +210,101 @@ We recommend using the website [**draw.io** / diagrams.net](https://draw.io) (al
 | Aggregation (HAS-A)          | ◇ Diamond Arrow                           |
 | Inheritance (IS-A)           | ◁ Triangle Arrow                          |
 | Multiplicity (Cardinality)   | `1`, `0..1`, `1..*`, `*`                |
+
+<br>
+
+## Using Enums in UML Class Diagrams
+
+When designing object-oriented systems, it's common to use **enums** to represent a fixed set of values — for example, message priorities like `NORMAL`, `HIGH`, or `URGENT`. UML has a standard way to show this.
+
+### Declaring an Enum in UML
+
+You represent an enum using a **class-like box** with the stereotype `<<enumeration>>`. For example:
+
+```
+---------------------------
+<<enumeration>> Priority
+---------------------------
+- NORMAL
+- HIGH
+- URGENT
+---------------------------
+```
+
+This indicates that `Priority` is an enum with three possible values.
+
+### Referencing the Enum in a Class
+
+If you have a class like `Message` that uses this enum, you can show it as:
+
+```
+-----------------------
+|      Message        |
+-----------------------
+- priority: Priority
++ getPriority(): Priority
+-----------------------
+```
+
+This shows that the `priority` field is of type `Priority`, defined by the enum above.
+
+### Connecting the Enum to the Class
+
+Use a **simple solid line** (association) to connect the class to the enum:
+
+```
+  -----------------------
+  |      Message        |
+  -----------------------
+  - priority: Priority
+  -----------------------
+
+         |
+         |
+         v
+---------------------------
+<<enumeration>> Priority
+---------------------------
+- NORMAL
+- HIGH
+- URGENT
+---------------------------
+```
+
+There is:
+- **No diamond** (◇) — this is not aggregation.
+- **No triangle** (◁) — this is not inheritance.
+- Just a plain association line to indicate usage.
+
+### In Java
+
+```java
+public enum Priority {
+    NORMAL,
+    HIGH,
+    URGENT
+}
+
+public class Message {
+    private Priority priority;
+
+    public Priority getPriority() {
+        return priority;
+    }
+}
+```
+
+### Summary
+
+| Concept        | UML Representation             |
+|----------------|--------------------------------|
+| Enum           | `<<enumeration>>` stereotype   |
+| Enum values    | Listed in enum block           |
+| Attribute type | `priority: Priority`           |
+| Relationship   | Solid line (association)       |
+
+Use this approach in your ICS4U designs when modeling any fixed-value types using enums.
+
 
 <br>
 
