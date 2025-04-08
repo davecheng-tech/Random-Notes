@@ -200,25 +200,6 @@ Just be consistent within a diagram.
 
 <br>
 
-## <a name='ToolsforMakingUMLDiagrams'></a>Tools for Making UML Diagrams
-We recommend using the website [**draw.io** / diagrams.net](https://draw.io) (also available on the Chrome Web Store) to build your own UML class diagrams.
-
-<br>
-
-## <a name='SummaryofElementstoInclude'></a>Summary of Elements to Include
-| Feature                        | Notation / Indicator                    |
-|-------------------------------|-----------------------------------------|
-| Public / Private              | `+` / `-`                               |
-| Attribute (Field)             | `name: Type`                            |
-| Method                        | `methodName(params): ReturnType`       |
-| Static                        | <ins>Underlined</ins>                              |
-| Abstract                      | *Italicized*                              |
-| Aggregation (HAS-A)          | ◇ Diamond Arrow                           |
-| Inheritance (IS-A)           | ◁ Triangle Arrow                          |
-| Multiplicity (Cardinality)   | `1`, `0..1`, `1..*`, `*`                |
-
-<br>
-
 ## <a name='UsingEnumsinUMLClassDiagrams'></a>Using Enums in UML Class Diagrams
 
 When designing object-oriented systems, it's common to use **enums** to represent a fixed set of values — for example, message priorities like `NORMAL`, `HIGH`, or `URGENT`. UML has a standard way to show this.
@@ -281,6 +262,24 @@ public class Message {
 
 Use this approach in your designs when modeling any fixed-value types using enums.
 
+<br>
+
+## <a name='SummaryofElementstoInclude'></a>Summary of Elements to Include
+| Feature                        | Notation / Indicator                    |
+|-------------------------------|-----------------------------------------|
+| Public / Private              | `+` / `-`                               |
+| Attribute (Field)             | `name: Type`                            |
+| Method                        | `methodName(params): ReturnType`       |
+| Static                        | <ins>Underlined</ins>                              |
+| Abstract                      | *Italicized*                              |
+| Aggregation (HAS-A)          | ◇ Diamond Arrow                           |
+| Inheritance (IS-A)           | ◁ Triangle Arrow                          |
+| Multiplicity (Cardinality)   | `1`, `0..1`, `1..*`, `*`                |
+
+<br>
+
+## <a name='ToolsforMakingUMLDiagrams'></a>Tools for Making UML Diagrams
+We recommend using the website [**draw.io** / diagrams.net](https://draw.io) (also available on the Chrome Web Store) to build your own UML class diagrams.
 
 <br>
 
