@@ -309,7 +309,7 @@ public class Message {
 | Attribute type | `priority: Priority`           |
 | Relationship   | Solid line (association)       |
 
-Use this approach in your ICS4U designs when modeling any fixed-value types using enums.
+Use this approach in your designs when modeling any fixed-value types using enums.
 
 
 <br>
