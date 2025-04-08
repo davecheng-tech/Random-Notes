@@ -227,15 +227,7 @@ When designing object-oriented systems, it's common to use **enums** to represen
 
 You represent an enum using a **class-like box** with the stereotype `<<enumeration>>`. For example:
 
-```
----------------------------
-<<enumeration>> Priority
----------------------------
-- NORMAL
-- HIGH
-- URGENT
----------------------------
-```
+![Enum Diagram](/images/uml-04b.png)
 
 This indicates that `Priority` is an enum with three possible values.
 
@@ -243,14 +235,8 @@ This indicates that `Priority` is an enum with three possible values.
 
 If you have a class like `Message` that uses this enum, you can show it as:
 
-```
------------------------
-|      Message        |
------------------------
-- priority: Priority
-+ getPriority(): Priority
------------------------
-```
+![Enum Diagram](/images/uml-04a.png)
+
 
 This shows that the `priority` field is of type `Priority`, defined by the enum above.
 
@@ -258,29 +244,13 @@ This shows that the `priority` field is of type `Priority`, defined by the enum 
 
 Use a **simple solid line** (association) to connect the class to the enum:
 
-```
-  -----------------------
-  |      Message        |
-  -----------------------
-  - priority: Priority
-  -----------------------
-
-         |
-         |
-         v
----------------------------
-<<enumeration>> Priority
----------------------------
-- NORMAL
-- HIGH
-- URGENT
----------------------------
-```
+![Enum Diagram](/images/uml-04.png)
 
 There is:
 - **No diamond** (◇) — this is not aggregation.
 - **No triangle** (◁) — this is not inheritance.
 - Just a plain association line to indicate usage.
+- Arrowhead is optional, but if used, should originate from the object to the enum.
 
 ### <a name='InJava'></a>In Java
 
