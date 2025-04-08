@@ -115,7 +115,8 @@ Methods must show the return type and the data type of any parameters:
 ## <a name='RelationshipsBetweenClasses'></a>Relationships Between Classes
 
 ### <a name='HAS-ARelationshipAggregation'></a>HAS-A Relationship (Aggregation)
-Represented by a **diamond** arrow:
+Represented by a **white (or empty) diamond** arrow pointing from the part to the whole:
+
 - A `Classroom` HAS-A `Teacher`
 - A `Classroom` HAS-MANY `Students`
 
@@ -126,7 +127,7 @@ The diagram will show multiplicity:
 - `*` for many (zero or more)
 
 ### <a name='IS-ARelationshipInheritance'></a>IS-A Relationship (Inheritance)
-Represented by a **solid** arrow with an empty triangle.
+Represented by a **white (or empty) triangle** arrow pointing from the child to the parent:
 - A `Teacher` IS-A `Person`
 - A `Player` IS-A `TeamMember`
 
@@ -269,12 +270,12 @@ Use this approach in your designs when modeling any fixed-value types using enum
 |-------------------------------|-----------------------------------------|
 | Public / Private              | `+` / `-`                               |
 | Attribute (Field)             | `name: Type`                            |
-| Method                        | `methodName(params): ReturnType`       |
-| Static                        | <ins>Underlined</ins>                              |
-| Abstract                      | *Italicized*                              |
-| Aggregation (HAS-A)          | ◇ Diamond Arrow                           |
-| Inheritance (IS-A)           | ◁ Triangle Arrow                          |
-| Multiplicity (Cardinality)   | `1`, `0..1`, `1..*`, `*`                |
+| Method                        | `methodName(params): ReturnType`        |
+| Static                        | <ins>Underlined</ins>                   |
+| Abstract                      | *Italicized*                            |
+| Aggregation (HAS-A)          | ◇ Diamond Arrow - from part to whole, w/ diamond on the whole side |
+| Inheritance (IS-A)           | ▷ Triangle Arrow (unfilled) - from child to parent |
+| Multiplicity (Cardinality)   | `1`, `0..1`, `1..*`, `*`                 |
 
 <br>
 
