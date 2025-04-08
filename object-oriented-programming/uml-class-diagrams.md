@@ -21,14 +21,14 @@ This note is a reference for understanding and creating **UML Class Diagrams** i
 	* [Generalized (Language-Neutral) Approach](#GeneralizedLanguage-NeutralApproach)
 	* [Specific (Java-Centric) Approach](#SpecificJava-CentricApproach)
 	* [So Which Should You Use?](#SoWhichShouldYouUse)
-* [Tools for Making UML Diagrams](#ToolsforMakingUMLDiagrams)
-* [Summary of Elements to Include](#SummaryofElementstoInclude)
 * [Using Enums in UML Class Diagrams](#UsingEnumsinUMLClassDiagrams)
 	* [Declaring an Enum in UML](#DeclaringanEnuminUML)
 	* [Referencing the Enum in a Class](#ReferencingtheEnuminaClass)
 	* [Connecting the Enum to the Class](#ConnectingtheEnumtotheClass)
 	* [In Java](#InJava)
 	* [Summary](#Summary)
+* [Summary of Elements to Include](#SummaryofElementstoInclude)
+* [Tools for Making UML Diagrams](#ToolsforMakingUMLDiagrams)
 * [Additional References](#AdditionalReferences)
 
 <!-- vscode-markdown-toc-config
