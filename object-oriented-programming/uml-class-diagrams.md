@@ -228,11 +228,7 @@ Use a **simple solid line** (association) to connect the class to the enum:
 
 ![Enum Diagram](/images/uml-04.png)
 
-There is:
-- **No diamond** (◇) — this is not aggregation.
-- **No triangle** (◁) — this is not inheritance.
-- Just a plain association line to indicate usage.
-- Arrowhead is optional, but if used, should originate from the object to the enum.
+Arrowhead is optional, but if used, should originate from the object to the enum.
 
 ### <a name='InJava'></a>In Java
 
@@ -256,7 +252,7 @@ public class Message {
 
 | Concept        | UML Representation             |
 |----------------|--------------------------------|
-| Enum           | `<<enumeration>>` stereotype   |
+| Enum           | `<<enumeration>>`              |
 | Enum values    | Listed in enum block           |
 | Attribute type | `priority: Priority`           |
 | Relationship   | Solid line (association)       |
@@ -273,9 +269,10 @@ Use this approach in your designs when modeling any fixed-value types using enum
 | Method                        | `methodName(params): ReturnType`        |
 | Static                        | <ins>Underlined</ins>                   |
 | Abstract                      | *Italicized*                            |
-| Aggregation (HAS-A)          | ◇ Diamond Arrow - from part to whole, w/ diamond on the whole side |
-| Inheritance (IS-A)           | ▷ Triangle Arrow (unfilled) - from child to parent |
-| Multiplicity (Cardinality)   | `1`, `0..1`, `1..*`, `*`                 |
+| Aggregation (HAS-A)           | ◇ Diamond Arrow - direction from part to whole, w/ diamond on the whole side |
+| Inheritance (IS-A)            | ▷ Triangle Arrow (unfilled) - direction from child to parent |
+| Association                   | Solid line                               |
+| Multiplicity (Cardinality)    | `1`, `0..1`, `1..*`, `*`                 |
 
 <br>
 
