@@ -5,11 +5,11 @@
 In this challenge, you’ll be presented with four real-world design scenarios. Your task is to design an object-oriented system for each situation. This means identifying and creating the right classes, deciding what data belongs in each class, and figuring out how the classes relate to each other. You’re not expected to write code — just focus on designing a good system using OOP principles.
 
 ### Four Principles of OOP
-#### Encapsulation
-Bundling data (fields) and methods that operate on that data into a single unit (class), and restricting direct access to some components to protect the integrity of the object.
-
 #### Abstraction
 Hiding complex implementation details and showing only the essential features of an object through a clear and simple interface.
+
+#### Encapsulation
+Bundling data (fields) and methods that operate on that data into a single unit (class), and restricting direct access to some components to protect the integrity of the object.
 
 #### Inheritance
 Allowing one class (subclass) to inherit fields and methods from another (superclass), promoting code reuse and hierarchical classification.
