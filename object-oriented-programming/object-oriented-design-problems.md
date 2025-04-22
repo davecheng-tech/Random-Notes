@@ -4,12 +4,18 @@
 
 In this challenge, you’ll be presented with four real-world design scenarios. Your task is to design an object-oriented system for each situation. This means identifying and creating the right classes, deciding what data belongs in each class, and figuring out how the classes relate to each other. You’re not expected to write code — just focus on designing a good system using OOP principles.
 
-Try to make use of:
+### Four Princniples of OOP
+#### Encapsulation
+Bundling data (fields) and methods that operate on that data into a single unit (class), and restricting direct access to some components to protect the integrity of the object.
 
-- **Encapsulation**: Keep your data safe and accessed through methods
-- **Inheritance**: Use shared behavior in a base class with specialized child classes
-- **Aggregation**: Model “has-a” relationships by combining objects
-- **Polymorphism**: Design methods that behave differently depending on the subclass
+#### Abstraction
+Hiding complex implementation details and showing only the essential features of an object through a clear and simple interface.
+
+#### Inheritance
+Allowing one class (subclass) to inherit fields and methods from another (superclass), promoting code reuse and hierarchical classification.
+
+#### Polymorphism
+Enabling objects to be treated as instances of their parent class rather than their actual class, allowing the same method to behave differently depending on the object’s runtime type.
 
 <br>
 
