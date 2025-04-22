@@ -1,4 +1,4 @@
-# Object-Oriented Design Problems
+# Object-Oriented Design Challenges
 
 ### Overview
 
