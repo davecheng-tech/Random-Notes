@@ -67,8 +67,8 @@ Your task:
 
 <br>
 
-## What to Submit
+## What to Work On
 
 Sketch or describe your class diagrams for each problem. Use boxes for classes, and lines/arrows to show relationships. Include method and property names where possible.
 
-You’ll have time to work on this independently or in pairs. Then we’ll take up each example together: looking first at a beginner solution and then at a more polished, professional version.
+You’ll have class time to work on this independently or in pairs. Then we’ll take up each example together: looking first at a beginner solution and then at a more polished, professional version.
