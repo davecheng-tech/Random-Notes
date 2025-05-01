@@ -4,6 +4,7 @@ In your ICS4U OOP Design Project, **your `main()` method shouldn't be a giant pi
 
 This note shows how to keep `main()` clean, readable, and easy to understand using a **Personal Library System** example.
 
+---
 
 ## Goal: Keep `main()` Simple and Meaningful
 
@@ -14,6 +15,7 @@ Your `main()` method should:
 - Show how classes interact
 - Avoid doing all the work itself!
 
+---
 
 ## Example: Clean, Clear `Main.java`
 
@@ -49,6 +51,8 @@ public class Main {
     }
 }
 ```
+
+---
 
 ## Example: Adding a Simple User Input Menu
 
@@ -115,10 +119,43 @@ public class Main {
 }
 ```
 
+---
+
+## Even Cleaner: Avoiding Raw Logic in `main()`
+
+Try not to write decision-making logic like this in `main()`:
+
+```java
+if (student.getGrade() < 50) {
+    System.out.println("You are failing.");
+}
+```
+
+Instead, move the logic to the class:
+
+```java
+// Inside Student.java
+public boolean isFailing() {
+    return grade < 50;
+}
+```
+
+Then your `main()` becomes:
+
+```java
+if (student.isFailing()) {
+    System.out.println("You are failing.");
+}
+```
+
+Cleaner, clearer, and easier to maintain.
+
+---
+
 ## Final Tips
 
 - Your `main()` should read like a **story** — what the program does, not how every little thing is done.
 - Offload logic to classes and helper methods.
 - Think of `main()` as the **director**, not the actor.
 
-Clean `main()` = Clear program design = Higher marks 💰
+**Clean `main()` = Clear program design = Higher marks 💰**
