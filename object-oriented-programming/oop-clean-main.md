@@ -1,4 +1,4 @@
-# Cleaning Up Your `main()` Method (ICS4U Project Tip)
+# Cleaning Up Your `main()` Method
 
 In your ICS4U OOP Design Project, **your `main()` method shouldn't be a giant pile of spaghetti**. Think of `main()` as the "entry point" to your program — it should **coordinate**, not **micromanage**.
 
@@ -121,4 +121,4 @@ public class Main {
 - Offload logic to classes and helper methods.
 - Think of `main()` as the **director**, not the actor.
 
-Clean `main()` = Clear program design = Higher marks ✅
+Clean `main()` = Clear program design = Higher marks 💰
